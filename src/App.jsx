@@ -5,7 +5,6 @@ import getRandom from './services/getRandom';
 import {useState} from 'react';
 import ShowPhrase from './components/ShowPhrase';
 import ButtonPhrase from './components/buttonPhrase';
-
 import arrayImages from './utils/images.json';
 
 function App() {
@@ -14,8 +13,10 @@ function App() {
   
  const[image, setImage] = useState(getRandom(arrayImages));
 
-  const objStyles ={
-  backgroundImage:`url(../public/fortuna-2/fondo${image}.png)`,
+ const url = `../fortuna-2/fondo${image}.png`
+
+   const objStyles ={
+  backgroundImage:`url(${url})`
    }
 
   return (
